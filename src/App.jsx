@@ -1,10 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Navigation from "./components/Navigation";
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import About from "./pages/About";
+import { Analytics } from "@vercel/analytics/react";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Navigation from "./components/Navigation";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -13,6 +16,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navigation />
+        <Analytics />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
