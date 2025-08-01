@@ -1,39 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
-    <>
-      <h1>hankiou.com</h1>
-      <h2 className="text-neutral-500">Developper from france</h2>
-      <div className="border border-neutral-700 flex flex-col gap-1 p-1">
-        <a
-          href="https://geowarmup.hankiou.com"
-          className="flex gap-1 items-center p-1 justify-between"
-        >
-          <img className="w-8" src="/gw128.png" />
-          <span>geowarmup❚</span>
-          <i className="fa-solid fa-up-right-from-square"></i>
-        </a>
-
-        <a
-          href="https://hankiou.github.io/cv/"
-          className="flex gap-1 items-center p-1 justify-between"
-        >
-          <img className="w-8" src="/vite.svg" />
-          <span>cv</span>
-          <i className="fa-solid fa-up-right-from-square"></i>
-        </a>
-
-        <a
-          href="https://dofus-games.onrender.com/"
-          className="flex gap-1 items-center p-1 justify-between"
-        >
-          <img className="w-8" src="/dg.png" />
-          <span>dofus: les gardiens de donjons</span>
-          <i className="fa-solid fa-up-right-from-square"></i>
-        </a>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-    </>
+    </Router>
   );
 }
 
