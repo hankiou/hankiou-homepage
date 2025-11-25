@@ -14,7 +14,7 @@ import Terms from "./pages/Terms";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="brand-base min-h-screen flex flex-col">
         <Navigation />
         <Analytics />
         <main className="flex-grow">

@@ -3,34 +3,35 @@ import { MapPin, Send } from "lucide-react";
 function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left Column - Projects (3/12) */}
-        <aside className="col-span-3">
-          <section className="top-8">
-            <h3 className="text-xl font-semibold mb-2">Conventional CV</h3>
+        <aside className="md:col-span-3 order-2 md:order-1">
+          <section className="md:sticky md:top-24">
+            <h3 className="heading-5 mb-4">Conventional CV</h3>
             <div className="space-y-3 flex flex-col items-center">
               <a
                 href="https://hankiou.github.io/cv/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[75%] block border border-neutral-700 rounded-lg hover:border-neutral-500 transition-colors overflow-hidden"
+                className="card w-[75%] block hover:scale-105 transition-transform overflow-hidden"
               >
                 <img
-                  className="w-full h-auto"
+                  className="w-full h-auto rounded"
                   src="/cv-preview.png"
                   alt="Professional CV Preview"
                 />
               </a>
             </div>
           </section>
-          <section className="mt-4">
-            <h3 className="text-xl font-semibold mb-2">Side Projects</h3>
-            <div className="space-y-3">
+
+          <section className="mt-8">
+            <h3 className="heading-5 mb-4">Side Projects</h3>
+            <div className="space-y-4">
               <a
                 href="https://geowarmup.hankiou.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-neutral-700 p-4 rounded-lg hover:border-neutral-500 transition-colors"
+                className="card block"
               >
                 <div className="flex items-start gap-3">
                   <img
@@ -39,8 +40,8 @@ function Home() {
                     alt="GeoWarmup Logo"
                   />
                   <div className="min-w-0">
-                    <h4 className="font-semibold text-sm">geowarmup❚</h4>
-                    <p className="text-neutral-400 text-xs mt-1">
+                    <h4 className="heading-5 text-sm mb-1">geowarmup❚</h4>
+                    <p className="body-small">
                       Fast-paced geography game
                     </p>
                   </div>
@@ -51,7 +52,7 @@ function Home() {
                 href="https://dofus-games.onrender.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-neutral-700 p-4 rounded-lg hover:border-neutral-500 transition-colors"
+                className="card block"
               >
                 <div className="flex items-start gap-3">
                   <img
@@ -60,8 +61,8 @@ function Home() {
                     alt="Dofus Games Logo"
                   />
                   <div className="min-w-0">
-                    <h4 className="font-semibold text-sm">Dofus: Gardiens</h4>
-                    <p className="text-neutral-400 text-xs mt-1">
+                    <h4 className="heading-5 text-sm mb-1">Dofus: Gardiens</h4>
+                    <p className="body-small">
                       Boss guessing game
                     </p>
                   </div>
@@ -72,28 +73,27 @@ function Home() {
         </aside>
 
         {/* Middle Column - Main Content (6/12) */}
-        <main className="col-span-6">
-          <header className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-2">Enzo GUENY</h1>
-            <h2 className="text-xl text-neutral-300">
-              Full-Stack Developer from France
-            </h2>
-            <p className="mt-4 text-neutral-400">
+        <main className="md:col-span-6 order-1 md:order-2">
+          <header className="text-center mb-12 py-16 px-8 bg-blueprint-fade rounded-lg">
+            <h1 className="heading-1 mb-2 animate-fade-in">Enzo GUENY</h1>
+            <p className="mono-label mb-4 animate-fade-in delay-100">FULL-STACK DEVELOPER</p>
+            <h2 className="heading-4 text-muted mb-6 animate-fade-in delay-200">From Lyon, France</h2>
+            <p className="body-large max-w-2xl mx-auto animate-fade-in delay-300">
               Welcome to my digital space. I'm a passionate developer creating
               web applications and games. Explore my projects below.
             </p>
           </header>
 
-          <section className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4">About My Work</h3>
-            <div className="prose prose-neutral">
-              <p className="text-neutral-500">
+          <section className="card mb-12">
+            <h3 className="heading-3 mb-4">About My Work</h3>
+            <div className="space-y-4">
+              <p className="body-base">
                 As a developer, I focus on creating user-friendly applications
                 with a creative UI. I like creating projects for entertainment
                 that have an educational value. I believe in clean code,
                 intuitive design, and continuous improvement.
               </p>
-              <p className="text-neutral-500 mt-4">
+              <p className="body-base">
                 Each project represents a unique challenge and learning
                 opportunity. I try to use technologies I do not master to
                 increase my skillset. Whether it's optimizing performanc, or
@@ -105,33 +105,33 @@ function Home() {
         </main>
 
         {/* Right Column - Contact Card (3/12) */}
-        <aside className="col-span-3">
-          <div className="border border-neutral-700 rounded-lg p-6 sticky top-8">
-            <div className="space-y-4">
-              <div className="flex flex-col items-center">
-                <p className="text-neutral-400 text-sm mb-1">Daily Rate</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-2xl font-bold">520€</p>
+        <aside className="md:col-span-3 order-3">
+          <div className="card-glow md:sticky md:top-24">
+            <div className="space-y-6">
+              <div className="text-center">
+                <p className="mono-label mb-2">Daily Rate</p>
+                <p className="heading-2 text-accent">520€</p>
+              </div>
+
+              <div className="divider"></div>
+
+              <div className="text-center">
+                <p className="mono-label mb-2">Location</p>
+                <div className="flex items-center justify-center gap-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                  <p className="heading-5">Lyon</p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center">
-                <p className="text-neutral-400 text-sm mb-1">Location</p>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  <p className="text-lg">Lyon</p>
-                </div>
-              </div>
+              <div className="divider"></div>
 
-              <div className="pt-2">
-                <a
-                  href="mailto:enzogueny30@gmail.com"
-                  className="flex items-center justify-center gap-2 w-full bg-white text-black font-semibold hover:bg-neutral-200 text-center py-3 px-4 rounded-lg transition-all hover:scale-105"
-                >
-                  <Send className="w-4 h-4" />
-                  Get in Touch
-                </a>
-              </div>
+              <a
+                href="mailto:enzogueny30@gmail.com"
+                className="btn btn-primary animate-pulse-glow w-full"
+              >
+                <Send className="w-4 h-4" />
+                Get in Touch
+              </a>
             </div>
           </div>
         </aside>
