@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { MapPin, Send } from "lucide-react";
 
 function Home() {
   return (
-    <div className="max-w-8xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="grid grid-cols-12 gap-6">
         {/* Left Column - Projects (3/12) */}
         <aside className="col-span-3">
@@ -104,9 +104,36 @@ function Home() {
           </section>
         </main>
 
-        {/* Right Column - Empty for now (3/12) */}
+        {/* Right Column - Contact Card (3/12) */}
         <aside className="col-span-3">
-          {/* Reserved for future content */}
+          <div className="border border-neutral-700 rounded-lg p-6 sticky top-8">
+            <div className="space-y-4">
+              <div className="flex flex-col items-center">
+                <p className="text-neutral-400 text-sm mb-1">Daily Rate</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-2xl font-bold">520€</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <p className="text-neutral-400 text-sm mb-1">Location</p>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5" />
+                  <p className="text-lg">Lyon</p>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href="mailto:enzogueny30@gmail.com"
+                  className="flex items-center justify-center gap-2 w-full bg-white text-black font-semibold hover:bg-neutral-200 text-center py-3 px-4 rounded-lg transition-all hover:scale-105"
+                >
+                  <Send className="w-4 h-4" />
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
