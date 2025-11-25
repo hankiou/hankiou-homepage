@@ -10,7 +10,7 @@
 /* =============================================
    FONTS
    ============================================= */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 /* =============================================
    CSS CUSTOM PROPERTIES (Design Tokens)
@@ -32,22 +32,22 @@
   --color-green-500: #22c55e;
   --color-green-400: #4ade80;
   --color-green-300: #86efac;
-  
+
   /* Semantic Colors */
   --bg-primary: var(--color-slate-950);
   --bg-secondary: var(--color-slate-900);
   --bg-tertiary: var(--color-slate-800);
   --bg-elevated: var(--color-slate-700);
-  
+
   --border-default: var(--color-slate-700);
   --border-subtle: var(--color-slate-600);
   --border-accent: var(--color-green-500);
-  
+
   --text-primary: var(--color-slate-100);
   --text-secondary: var(--color-slate-300);
   --text-muted: var(--color-slate-400);
   --text-inverse: var(--color-slate-950);
-  
+
   --accent: var(--color-green-500);
   --accent-hover: var(--color-green-400);
   --accent-active: var(--color-green-600);
@@ -55,8 +55,8 @@
   --accent-glow-strong: rgba(34, 197, 94, 0.25);
 
   /* Typography */
-  --font-sans: 'Sora', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-sans: "Sora", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
 
   /* Type Scale */
   --text-xs: 0.75rem;
@@ -118,8 +118,8 @@
   /* Blueprint Grid */
   --grid-color-major: var(--color-slate-700);
   --grid-color-minor: var(--color-slate-800);
-  --grid-size-major: 80px;
-  --grid-size-minor: 20px;
+  --grid-size-major: 120px;
+  --grid-size-minor: 30px;
 }
 
 /* =============================================
@@ -141,8 +141,12 @@
    ============================================= */
 
 /* Font Families */
-.font-sans { font-family: var(--font-sans); }
-.font-mono { font-family: var(--font-mono); }
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
 
 /* Headings */
 .heading-1 {
@@ -229,10 +233,18 @@
 }
 
 /* Text Colors */
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-muted { color: var(--text-muted); }
-.text-accent { color: var(--accent); }
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-accent {
+  color: var(--accent);
+}
 
 /* =============================================
    BACKGROUND PATTERNS
@@ -241,13 +253,14 @@
 /* Blueprint Grid Background */
 .bg-blueprint {
   background-color: var(--bg-primary);
-  background-image:
-    linear-gradient(var(--grid-color-major) 1px, transparent 1px),
+  background-image: linear-gradient(
+      var(--grid-color-major) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, var(--grid-color-major) 1px, transparent 1px),
     linear-gradient(var(--grid-color-minor) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color-minor) 1px, transparent 1px);
-  background-size:
-    var(--grid-size-major) var(--grid-size-major),
+  background-size: var(--grid-size-major) var(--grid-size-major),
     var(--grid-size-major) var(--grid-size-major),
     var(--grid-size-minor) var(--grid-size-minor),
     var(--grid-size-minor) var(--grid-size-minor);
@@ -257,37 +270,61 @@
 /* Blueprint with fade edges */
 .bg-blueprint-fade {
   background-color: var(--bg-primary);
-  background-image:
-    linear-gradient(var(--grid-color-major) 1px, transparent 1px),
+  background-image: linear-gradient(
+      var(--grid-color-major) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, var(--grid-color-major) 1px, transparent 1px),
     linear-gradient(var(--grid-color-minor) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color-minor) 1px, transparent 1px);
-  background-size:
-    var(--grid-size-major) var(--grid-size-major),
+  background-size: var(--grid-size-major) var(--grid-size-major),
     var(--grid-size-major) var(--grid-size-major),
     var(--grid-size-minor) var(--grid-size-minor),
     var(--grid-size-minor) var(--grid-size-minor);
   background-position: -1px -1px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    black 20%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    black 20%,
+    transparent 100%
+  );
 }
 
 /* Dot Grid Background */
 .bg-dots {
   background-color: var(--bg-primary);
-  background-image: radial-gradient(var(--grid-color-major) 1px, transparent 1px);
+  background-image: radial-gradient(
+    var(--grid-color-major) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
 }
 
 /* Surface Backgrounds */
-.bg-surface-primary { background-color: var(--bg-primary); }
-.bg-surface-secondary { background-color: var(--bg-secondary); }
-.bg-surface-tertiary { background-color: var(--bg-tertiary); }
-.bg-surface-elevated { background-color: var(--bg-elevated); }
+.bg-surface-primary {
+  background-color: var(--bg-primary);
+}
+.bg-surface-secondary {
+  background-color: var(--bg-secondary);
+}
+.bg-surface-tertiary {
+  background-color: var(--bg-tertiary);
+}
+.bg-surface-elevated {
+  background-color: var(--bg-elevated);
+}
 
 /* Gradient Backgrounds */
 .bg-gradient-dark {
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--bg-secondary) 0%,
+    var(--bg-primary) 100%
+  );
 }
 
 .bg-gradient-accent {
@@ -380,14 +417,12 @@
   position: relative;
   /* Beveled border effect */
   background-clip: padding-box;
-  box-shadow: 
-    inset 1px 1px 0 rgba(255, 255, 255, 0.08),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.2),
-    0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
@@ -405,14 +440,6 @@
   pointer-events: none;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    inset 1px 1px 0 rgba(255, 255, 255, 0.1),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.2),
-    0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
 .card-accent {
   background: linear-gradient(
     135deg,
@@ -425,14 +452,12 @@
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   position: relative;
-  box-shadow: 
-    inset 1px 1px 0 rgba(34, 197, 94, 0.15),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.2),
-    0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 0 rgba(34, 197, 94, 0.15),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-accent::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
@@ -462,15 +487,13 @@
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   position: relative;
-  box-shadow: 
-    inset 1px 1px 0 rgba(34, 197, 94, 0.2),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.2),
-    0 0 25px rgba(34, 197, 94, 0.2),
+  box-shadow: inset 1px 1px 0 rgba(34, 197, 94, 0.2),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.2), 0 0 25px rgba(34, 197, 94, 0.2),
     0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
@@ -513,9 +536,15 @@
   color: var(--accent);
 }
 
-.code-keyword { color: var(--accent); }
-.code-string { color: var(--color-green-300); }
-.code-comment { color: var(--text-muted); }
+.code-keyword {
+  color: var(--accent);
+}
+.code-string {
+  color: var(--color-green-300);
+}
+.code-comment {
+  color: var(--text-muted);
+}
 
 /* Terminal/Console Style */
 .terminal {
@@ -541,9 +570,15 @@
   background-color: var(--border-default);
 }
 
-.terminal-dot.red { background-color: #ef4444; }
-.terminal-dot.yellow { background-color: #eab308; }
-.terminal-dot.green { background-color: var(--accent); }
+.terminal-dot.red {
+  background-color: #ef4444;
+}
+.terminal-dot.yellow {
+  background-color: #eab308;
+}
+.terminal-dot.green {
+  background-color: var(--accent);
+}
 
 .terminal-body {
   padding: var(--space-4);
@@ -663,60 +698,140 @@
   padding: 0 var(--space-6);
 }
 
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.gap-1 { gap: var(--space-1); }
-.gap-2 { gap: var(--space-2); }
-.gap-3 { gap: var(--space-3); }
-.gap-4 { gap: var(--space-4); }
-.gap-6 { gap: var(--space-6); }
-.gap-8 { gap: var(--space-8); }
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: var(--space-1);
+}
+.gap-2 {
+  gap: var(--space-2);
+}
+.gap-3 {
+  gap: var(--space-3);
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-6 {
+  gap: var(--space-6);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
 
 /* Spacing */
-.p-4 { padding: var(--space-4); }
-.p-6 { padding: var(--space-6); }
-.p-8 { padding: var(--space-8); }
-.py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
-.py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
-.py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
-.mb-2 { margin-bottom: var(--space-2); }
-.mb-4 { margin-bottom: var(--space-4); }
-.mb-6 { margin-bottom: var(--space-6); }
-.mb-8 { margin-bottom: var(--space-8); }
-.mt-4 { margin-top: var(--space-4); }
-.mt-8 { margin-top: var(--space-8); }
+.p-4 {
+  padding: var(--space-4);
+}
+.p-6 {
+  padding: var(--space-6);
+}
+.p-8 {
+  padding: var(--space-8);
+}
+.py-12 {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.py-24 {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+.mb-6 {
+  margin-bottom: var(--space-6);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mt-4 {
+  margin-top: var(--space-4);
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
 
 /* Text Alignment */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 
 /* Grid */
-.grid { display: grid; }
-.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid {
+  display: grid;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
 
 /* =============================================
    ANIMATIONS
    ============================================= */
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: var(--shadow-glow); }
-  50% { box-shadow: var(--shadow-glow-strong); }
+  0%,
+  100% {
+    box-shadow: var(--shadow-glow);
+  }
+  50% {
+    box-shadow: var(--shadow-glow-strong);
+  }
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .animate-fade-in {
@@ -728,17 +843,27 @@
 }
 
 .cursor-blink::after {
-  content: '▋';
+  content: "▋";
   animation: blink 1s step-end infinite;
   color: var(--accent);
 }
 
 /* Staggered Animation Delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
+}
 
 /* =============================================
    RESPONSIVE

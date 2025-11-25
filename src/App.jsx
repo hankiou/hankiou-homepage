@@ -2,7 +2,6 @@ import "./App.css";
 
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import About from "./pages/About";
 import { Analytics } from "@vercel/analytics/react";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
@@ -20,7 +19,6 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

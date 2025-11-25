@@ -17,8 +17,8 @@ function Navigation() {
             <Link to="/" className="nav-link">
               Home
             </Link>
-            <Link to="/about" className="nav-link">
-              About
+            <Link to="/portfolio" className="nav-link">
+              Portfolio
             </Link>
             <Link to="/contact" className="nav-link">
               Contact
@@ -50,11 +50,11 @@ function Navigation() {
                 Home
               </Link>
               <Link
-                to="/about"
+                to="/portfolio"
                 className="nav-link block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Portfolio
               </Link>
               <Link
                 to="/contact"
