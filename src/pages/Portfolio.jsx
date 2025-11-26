@@ -4,7 +4,8 @@ import { LoadingSpinner } from '../components/LoadingSpinner';
 import { TagBadge } from '../components/TagBadge';
 import { PortfolioCard } from '../components/PortfolioCard';
 import { PortfolioModal } from '../components/PortfolioModal';
-import { extractUniqueTags, filterByTags } from '../utils/portfolioHelpers';
+import { filterByTags } from '../utils/portfolioHelpers';
+import { TAGS } from '../config/tags';
 
 function Portfolio() {
   const [portfolioData, setPortfolioData] = useState([]);
@@ -12,7 +13,6 @@ function Portfolio() {
   const [error, setError] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [allTags, setAllTags] = useState([]);
 
   // Fetch portfolio data
   useEffect(() => {
@@ -23,7 +23,6 @@ function Portfolio() {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         setPortfolioData(data);
-        setAllTags(extractUniqueTags(data));
       } catch (err) {
         setError(err.message);
         console.error('Error fetching portfolio:', err);
@@ -50,10 +49,10 @@ function Portfolio() {
     return { featuredItems: featured, regularItems: regular };
   }, [filteredItems]);
 
-  // Toggle tag selection
+  // Toggle tag selection - single selection mode
   const toggleTag = (tag) => {
     setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+      prev.includes(tag) ? [] : [tag]
     );
   };
 
@@ -75,17 +74,12 @@ function Portfolio() {
       {/* Tag Filter Section */}
       <div className="mb-8">
         <div className="flex flex-wrap gap-2 justify-center">
-          <button
-            className={`tag transition-all cursor-pointer ${selectedTags.length === 0 ? 'ring-2 ring-accent' : ''}`}
-            onClick={() => setSelectedTags([])}
-          >
-            All
-          </button>
-          {allTags.map((tag) => (
+          {TAGS.map(({ tag }) => (
             <TagBadge
               key={tag}
               tag={tag}
               isSelected={selectedTags.includes(tag)}
+              hasActiveSelection={selectedTags.length > 0}
               onClick={toggleTag}
             />
           ))}

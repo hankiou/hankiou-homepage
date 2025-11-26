@@ -1,45 +1,22 @@
-import {
-  Box,
-  Brush,
-  Code2,
-  DraftingCompass,
-  Gamepad2,
-  Globe,
-  Image,
-  Palette,
-  Pen,
-  Sparkles,
-  WandSparkles,
-} from "lucide-react";
+import { getTagColor, getTagIcon } from "../config/tags";
 
-import { getTagColor } from "../config/tagColors";
-
-const TAG_ICONS = {
-  dev: Code2,
-  web: Globe,
-  ux: WandSparkles,
-  "3D": Box,
-  game: Gamepad2,
-  art: Palette,
-  pixelart: Image,
-  gamedev: Gamepad2,
-  "paper drawing": Pen,
-  "digital drawing": Brush,
-  handcraft: DraftingCompass,
-};
-
-const getTagIcon = (tag) => {
-  return TAG_ICONS[tag] || Sparkles;
-};
-
-export const TagBadge = ({ tag, onClick, isSelected, iconVisible = true }) => {
+export const TagBadge = ({
+  tag,
+  onClick,
+  isSelected,
+  iconVisible = true,
+  hasActiveSelection = false,
+}) => {
   const colors = getTagColor(tag);
   const Icon = getTagIcon(tag);
+  const shouldGrayscale = hasActiveSelection && !isSelected;
 
   return (
     <span
-      className={`tag transition-all ${onClick ? "cursor-pointer" : ""} ${
-        isSelected ? "ring-2 ring-accent" : ""
+      className={`tag select-none transition-all ${
+        onClick ? "cursor-pointer" : ""
+      } ${isSelected ? "ring-2 ring-accent" : ""} ${
+        shouldGrayscale ? "grayscale opacity-50" : ""
       }`}
       style={{
         backgroundColor: colors.background,
