@@ -8,10 +8,12 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Navigation from "./components/Navigation";
 import Portfolio from "./pages/Portfolio";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="brand-base min-h-screen flex flex-col">
         <Navigation />
         <Analytics />

@@ -35,7 +35,7 @@ function Navigation() {
               className={`fa-solid ${isMenuOpen ? "fa-xmark" : "fa-bars"}`}
             ></i>
           </button>
-          <div className="hidden md:!block" />
+          <div className="hidden md:!block opacity-0">hankiou.com</div>
         </div>
 
         {/* Mobile Navigation */}

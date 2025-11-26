@@ -54,7 +54,7 @@ function Home() {
   return (
     <div className="max-w-7xl mx-auto px-2 py-8">
       {/* Full-Width Title Section */}
-      <header className="text-center mb-8 py-16 px-8 bg-blueprint-fade rounded-lg">
+      <header className="text-center mb-8 py-16 px-0 bg-blueprint-fade rounded-lg">
         <p className="text-accent mono-label mb-4 animate-fade-in delay-100">
           {"</>"}
         </p>
@@ -127,34 +127,63 @@ function Home() {
             <h3 className="heading-3 mb-4">About My Work</h3>
             <div className="space-y-4">
               <p className="body-base">
-                As a developer, I focus on creating user-friendly applications
-                with a creative UI. I like creating projects for entertainment
-                that have an educational value. I believe in clean code,
-                intuitive design, and continuous improvement.
+                As a developer, I focus on creating{" "}
+                <span className="highlighted">user-friendly applications</span>{" "}
+                with a creative UI. I believe in clean code, intuitive design,
+                and continuous improvement.
               </p>
               <p className="body-base">
                 Each project represents a unique challenge and learning
-                opportunity. I try to use technologies I do not master to
+                opportunity. I try to explore new technologies in order to
                 increase my skillset. Whether it's optimizing performance, or
-                creating engaging user interfaces, I approach every project with
-                creativity and attention to detail.
+                developing engaging user interfaces, I approach every project
+                with <span className="highlighted">creativity</span> and
+                attention to detail. I like making projects for entertainment
+                that have an educational value.
+              </p>
+              <p className="body-base">
+                My <span className="highlighted">added value</span> as a
+                full-stack programmer resides in having an accurate
+                understanding of my customers needs and converting them into
+                clever interface concepts. I am qualified by{" "}
+                <span className="highlighted">4 years of experience</span> in
+                coding end-to-end features inside complex existing codebases and
+                datamodels.
               </p>
             </div>
           </section>
-          <h3 className="heading-3 mb-4">Stack</h3>
-          <div className="flex flex-wrap justify-center gap-2 mt-8">
-            <TechBadge tech="Javascript" />
-            <TechBadge tech="React" />
-            <TechBadge tech="Node.js" />
-            <TechBadge tech="Tailwindcss" />
-            <TechBadge tech="Figma" />
-            <TechBadge tech="Blender" />
-            <TechBadge tech="express" />
-            <TechBadge tech="Rubyonrails" />
-            <TechBadge tech="Docker" />
-            <TechBadge tech="Git" />
-            <TechBadge tech="PostgreSQL" />
-            <TechBadge tech="MongoDB" />
+          <section className="mb-12">
+            <h3 className="heading-3 mb-4">Stack</h3>
+            <div className="flex flex-wrap justify-center gap-2 mt-8">
+              <TechBadge tech="Javascript" />
+              <TechBadge tech="React" />
+              <TechBadge tech="Node.js" />
+              <TechBadge tech="Tailwindcss" />
+              <TechBadge tech="Figma" />
+              <TechBadge tech="Blender" />
+              <TechBadge tech="express" />
+              <TechBadge tech="Rubyonrails" />
+              <TechBadge tech="Docker" />
+              <TechBadge tech="Git" />
+              <TechBadge tech="PostgreSQL" />
+              <TechBadge tech="Claude" />
+            </div>
+          </section>
+          <div className="card mt-8 space-y-4">
+            <p className="heading-5">My opinion on Artificial Intelligence</p>
+            <p className="body-base">
+              LLMs for coding are evolving at an incredible rate and I estimate
+              that they are mandatory tools that programmers have to master. I
+              use Claude daily, and it allows me to work significantly faster
+              than I used to. I learn everyday from it and it makes me a better
+              programmer.
+            </p>
+            <p className="body-base">
+              As of 2025 I still consider that human input is required for
+              robust and well-aligned outcomes. I believe that a knowledged
+              programmer assisted by cutting-edge models can be immensely
+              productive.
+            </p>
           </div>
         </main>
 

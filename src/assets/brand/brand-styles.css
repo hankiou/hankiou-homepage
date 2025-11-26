@@ -246,6 +246,20 @@
   color: var(--accent);
 }
 
+/* Gradient Highlight */
+.highlighted {
+  background: linear-gradient(
+    -135deg,
+    var(--accent) 0%,
+    var(--accent-hover) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-bold);
+  text-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
 /* =============================================
    BACKGROUND PATTERNS
    ============================================= */

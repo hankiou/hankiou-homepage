@@ -20,9 +20,20 @@
       var(--grid-color-minor, rgba(148, 163, 184, 0.1)) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, var(--grid-color-minor, rgba(148, 163, 184, 0.1)) 1px, transparent 1px),
-    linear-gradient(var(--grid-color-major, rgba(148, 163, 184, 0.2)) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color-major, rgba(148, 163, 184, 0.2)) 1px, transparent 1px);
+    linear-gradient(
+      90deg,
+      var(--grid-color-minor, rgba(148, 163, 184, 0.1)) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      var(--grid-color-major, rgba(148, 163, 184, 0.2)) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      var(--grid-color-major, rgba(148, 163, 184, 0.2)) 1px,
+      transparent 1px
+    );
   background-size: var(--grid-size-minor, 20px) var(--grid-size-minor, 20px),
     var(--grid-size-minor, 20px) var(--grid-size-minor, 20px),
     var(--grid-size-major, 100px) var(--grid-size-major, 100px),
@@ -120,11 +131,6 @@
 
 .calendar-month--active .month-label {
   color: var(--text-primary, #f1f5f9);
-}
-
-.calendar-month:focus-visible {
-  outline: 2px solid var(--accent, #3b82f6);
-  outline-offset: 2px;
 }
 
 .month-label {
