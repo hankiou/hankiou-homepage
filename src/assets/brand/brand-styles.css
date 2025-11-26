@@ -422,8 +422,7 @@
     rgba(30, 41, 59, 0.6) 0%,
     rgba(15, 23, 42, 0.4) 100%
   );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px) !important;
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -460,8 +459,7 @@
     rgba(34, 197, 94, 0.08) 0%,
     rgba(15, 23, 42, 0.5) 100%
   );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px) !important;
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -495,8 +493,7 @@
     rgba(34, 197, 94, 0.12) 0%,
     rgba(15, 23, 42, 0.6) 100%
   );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px) !important;
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
