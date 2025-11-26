@@ -1,7 +1,7 @@
 import { TagBadge } from "./TagBadge";
 
 export const PortfolioCard = ({ item, onClick }) => {
-  const thumbnailFile = item.files?.[0];
+  const thumbnailPath = item.thumbnail || item.files?.[0]?.path;
 
   return (
     <div
@@ -10,10 +10,10 @@ export const PortfolioCard = ({ item, onClick }) => {
     >
       {/* Thumbnail Image */}
       <div className="relative overflow-hidden">
-        {thumbnailFile ? (
+        {thumbnailPath ? (
           <>
             <img
-              src={thumbnailFile.path}
+              src={thumbnailPath}
               alt={item.title}
               className="w-full h-auto object-cover"
               loading="lazy"

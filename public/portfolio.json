@@ -7,6 +7,7 @@
     "tech": ["react", "tailwindcss", "vite"],
     "year": 2025,
     "featured": true,
+    "thumbnail": "/portfolio/thumbnails/geowarmup.webp",
     "files": [
       {
         "path": "/portfolio/geowarmup/main.png",
@@ -56,6 +57,7 @@
     ],
     "year": 2024,
     "featured": true,
+    "thumbnail": "/portfolio/thumbnails/cloverfield.webp",
     "files": [
       {
         "path": "/portfolio/clov-1.png",
@@ -77,6 +79,7 @@
     "tech": ["react"],
     "year": 2023,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/dofus-games.webp",
     "files": [
       {
         "path": "/portfolio/dofusgames/dg-1.PNG",
@@ -98,6 +101,7 @@
     "tech": ["figma"],
     "year": 2025,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/loot2-ui.webp",
     "files": [
       {
         "path": "/portfolio/Loot²/Group 26.png",
@@ -119,6 +123,7 @@
     "tech": [],
     "year": 2021,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/grapnel-character-concepts.webp",
     "files": [
       {
         "path": "/portfolio/Grapnel char concepts/char1.png",
@@ -149,6 +154,7 @@
     "tech": ["aseprite"],
     "year": 2021,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/mushroom-pixel-art.webp",
     "files": [
       {
         "path": "/portfolio/Mushroom/mushroom.PNG",
@@ -170,6 +176,7 @@
     "tech": [],
     "year": 2021,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/amsterdam-asset-pack.webp",
     "files": [
       {
         "path": "/portfolio/Pixel art assets _amsterdam_.png",
@@ -185,6 +192,7 @@
     "tech": ["aseprite", "obsstudio"],
     "year": 2020,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/stream-overlay-pack.webp",
     "files": [
       {
         "path": "/portfolio/stream overlay/stream-overlay.PNG",
@@ -206,6 +214,7 @@
     "tech": [],
     "year": 2020,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/characters-training.webp",
     "files": [
       {
         "path": "/portfolio/Characters/char2.jpg",
@@ -227,6 +236,7 @@
     "tech": [],
     "year": 2025,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/expression-studies.webp",
     "files": [
       {
         "path": "/portfolio/Expression study/girl1.jfif",
@@ -248,6 +258,7 @@
     "tech": [],
     "year": 2020,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/faces.webp",
     "files": [
       {
         "path": "/portfolio/Faces/faces.jpg",
@@ -275,6 +286,7 @@
     "tech": [],
     "year": 2025,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/cloth-study.webp",
     "files": [
       {
         "path": "/portfolio/cloth study.jpg",
@@ -291,6 +303,7 @@
     "tech": ["aseprite"],
     "year": 2018,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/pingu-party-card-sprites.webp",
     "files": [
       {
         "path": "/portfolio/PinguSprites.png",
@@ -306,6 +319,7 @@
     "tech": ["blender"],
     "year": 2025,
     "featured": false,
+    "thumbnail": "/portfolio/thumbnails/old-grandmas-lamp.webp",
     "files": [
       {
         "path": "/portfolio/lamp.png",
