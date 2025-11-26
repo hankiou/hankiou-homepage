@@ -1,57 +1,41 @@
+import { Send } from "lucide-react";
+import { SocialIcon } from "react-social-icons";
+
 function Contact() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Contact</h1>
-      
-      <div className="space-y-6 text-neutral-300">
-        <section>
-          <p className="text-lg">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be 
-            part of your visions.
-          </p>
-        </section>
+      <div className="bg-blueprint-fade py-12 px-8 rounded-lg mb-12 text-center">
+        <h1 className="heading-1 mb-4">Contact</h1>
+        <p className="mono-label">LET'S BUILD SOMETHING TOGETHER</p>
+      </div>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">Get in Touch</h2>
-          <p>
-            Feel free to reach out if you have any questions about my projects, want to 
-            collaborate, or just want to say hello!
-          </p>
-        </section>
+      <div className="space-y-8">
+        <p className="body-large text-center">
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your visions.
+        </p>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">Professional Inquiries</h2>
-          <p>
-            For professional opportunities, project collaborations, or freelance work, please 
-            don't hesitate to contact me. I'm particularly interested in:
-          </p>
-          <ul className="list-disc list-inside mt-3 space-y-1">
-            <li>Web application development projects</li>
-            <li>Game development opportunities</li>
-            <li>Open-source collaborations</li>
-            <li>Technical consulting</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-3">Connect Online</h2>
-          <div className="space-y-3">
-            <a 
-              href="https://hankiou.github.io/cv/" 
-              className="inline-flex items-center gap-2 text-blue-400 hover:underline"
-            >
-              <i className="fa-solid fa-file-lines"></i>
-              View my professional CV
-            </a>
+        <section className="card">
+          <h2 className="heading-3 mb-4">Socials</h2>
+          <div className="flex gap-3 justify-center">
+            <SocialIcon url="https://www.linkedin.com/in/enzo-gueny-3b16b9186/" />
+            <SocialIcon url="https://github.com/hankiou" />
           </div>
         </section>
 
-        <section className="bg-neutral-800 p-6 rounded-lg">
-          <h2 className="text-xl font-semibold mb-3">Response Time</h2>
-          <p>
-            I typically respond to inquiries within 48 hours. For urgent matters, please mention 
-            it in your message.
+        <section className="card-glow text-center">
+          <h2 className="heading-3 mb-4">Ready to Connect?</h2>
+          <p className="body-base mb-6">
+            Whether you're looking to start a new project or inviting me to join
+            your team as a consultant, I'd love to hear from you.
           </p>
+          <a
+            href="mailto:enzogueny30@gmail.com"
+            className="btn btn-primary animate-pulse-glow inline-flex items-center justify-center gap-2"
+          >
+            <Send className="w-4 h-4" />
+            Get in Touch
+          </a>
         </section>
       </div>
     </div>

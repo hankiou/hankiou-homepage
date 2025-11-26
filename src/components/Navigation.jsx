@@ -1,96 +1,74 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="border-b border-neutral-800 mb-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold">
+    <div className="sticky top-0 z-50 py-2">
+      <nav className="card !p-2">
+        <div className="flex items-center justify-between px-4">
+          <NavLink to="/" className="mono-accent heading-5">
             hankiou.com
-          </Link>
+          </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="hover:text-neutral-300 transition-colors">
+          <div className="hidden md:flex items-center gap-2">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-neutral-300 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="hover:text-neutral-300 transition-colors"
-            >
+            </NavLink>
+            <NavLink to="/portfolio" className="nav-link">
+              Portfolio
+            </NavLink>
+            <NavLink to="/contact" className="nav-link">
               Contact
-            </Link>
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:!hidden btn btn-ghost"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
             <i
-              className={`fa-solid ${
-                isMenuOpen ? "fa-xmark" : "fa-bars"
-              } text-xl`}
+              className={`fa-solid ${isMenuOpen ? "fa-xmark" : "fa-bars"}`}
             ></i>
           </button>
+          <div className="hidden md:!block" />
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-800">
-            <div className="flex flex-col gap-4">
-              <Link
+          <div className="px-4 pb-4">
+            <div className="divider my-2"></div>
+            <div className="space-y-2">
+              <NavLink
                 to="/"
-                className="hover:text-neutral-300 transition-colors"
+                className="nav-link block"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link>
-              <Link
-                to="/about"
-                className="hover:text-neutral-300 transition-colors"
+              </NavLink>
+              <NavLink
+                to="/portfolio"
+                className="nav-link block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
-              </Link>
-              <Link
+                Portfolio
+              </NavLink>
+              <NavLink
                 to="/contact"
-                className="hover:text-neutral-300 transition-colors"
+                className="nav-link block"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
-              <div className="flex gap-4 pt-4 border-t border-neutral-800 text-sm">
-                <Link
-                  to="/privacy"
-                  className="text-neutral-500 hover:text-neutral-300 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Privacy
-                </Link>
-                <Link
-                  to="/terms"
-                  className="text-neutral-500 hover:text-neutral-300 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Terms
-                </Link>
-              </div>
+              </NavLink>
             </div>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
