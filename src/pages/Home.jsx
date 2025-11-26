@@ -2,7 +2,7 @@ import { MapPin, Send } from "lucide-react";
 
 function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-2 py-8">
       {/* Full-Width Title Section */}
       <header className="text-center mb-8 py-16 px-8 bg-blueprint-fade rounded-lg">
         <p className="text-accent mono-label mb-4 animate-fade-in delay-100">
@@ -94,7 +94,7 @@ function Home() {
             <div className="space-y-6">
               <div className="text-center">
                 <p className="mono-label mb-2">Daily Rate</p>
-                <p className="heading-2 text-accent">520€</p>
+                <p className="heading-2 text-accent">480€</p>
               </div>
 
               <div className="divider"></div>

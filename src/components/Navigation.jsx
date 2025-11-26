@@ -5,8 +5,8 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 px-4 py-2">
-      <nav className="card max-w-6xl mx-auto !p-2">
+    <div className="sticky top-0 z-50 py-2">
+      <nav className="card max-w-6xl !p-2">
         <div className="flex items-center justify-between px-4">
           <Link to="/" className="mono-accent heading-5">
             hankiou.com
@@ -27,7 +27,7 @@ function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden btn btn-ghost"
+            className="md:!hidden btn btn-ghost"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -35,6 +35,7 @@ function Navigation() {
               className={`fa-solid ${isMenuOpen ? "fa-xmark" : "fa-bars"}`}
             ></i>
           </button>
+          <div className="hidden md:!block" />
         </div>
 
         {/* Mobile Navigation */}
@@ -62,21 +63,6 @@ function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
-              <div className="divider my-2"></div>
-              <Link
-                to="/privacy"
-                className="nav-link block body-small"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Privacy
-              </Link>
-              <Link
-                to="/terms"
-                className="nav-link block body-small"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Terms
               </Link>
             </div>
           </div>

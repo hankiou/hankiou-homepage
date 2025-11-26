@@ -51,28 +51,6 @@ function Footer() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="heading-5 mb-3">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/privacy"
-                  className="body-small text-muted hover:text-accent transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms"
-                  className="body-small text-muted hover:text-accent transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="divider my-8"></div>
