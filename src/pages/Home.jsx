@@ -1,6 +1,24 @@
-import { MapPin, Send } from "lucide-react";
+import { Check, Copy, MapPin, Send } from "lucide-react";
+
+import { useState } from "react";
 
 function Home() {
+  const [copied, setCopied] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const email = "enzogueny30@gmail.com";
+  const phone = "+33 7 70 50 85 85";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(phone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
+  };
   return (
     <div className="max-w-7xl mx-auto px-2 py-8">
       {/* Full-Width Title Section */}
@@ -91,7 +109,7 @@ function Home() {
         {/* Right Column - Daily Rate Box (3/12) */}
         <aside className="md:col-span-3">
           <div className="card-glow">
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="text-center">
                 <p className="mono-label mb-2">Daily Rate</p>
                 <p className="heading-2 text-accent">480€</p>
@@ -108,6 +126,44 @@ function Home() {
               </div>
 
               <div className="divider"></div>
+
+              <div
+                className="bg-black/40 cursor-pointer rounded-lg px-2 py-1 flex items-center justify-between gap-2"
+                onClick={handleCopy}
+              >
+                <code className="text-accent text-sm font-mono flex-grow overflow-x-hidden">
+                  {email}
+                </code>
+                <button
+                  className="p-2 cursor-pointer hover:bg-accent/10 rounded transition-colors flex-shrink-0"
+                  title="Copy email"
+                >
+                  {copied ? (
+                    <Check className="w-4 h-4 text-green-400" />
+                  ) : (
+                    <Copy className="w-4 h-4 text-accent" />
+                  )}
+                </button>
+              </div>
+
+              <div
+                className="bg-black/40 cursor-pointer rounded-lg px-2 py-1 flex items-center justify-between gap-2 whitespace-nowrap"
+                onClick={handleCopyPhone}
+              >
+                <code className="text-accent text-sm font-mono flex-grow overflow-x-hidden">
+                  {phone}
+                </code>
+                <button
+                  className="p-2 hover:bg-accent/10 rounded transition-colors flex-shrink-0"
+                  title="Copy phone"
+                >
+                  {copiedPhone ? (
+                    <Check className="w-4 h-4 text-green-400" />
+                  ) : (
+                    <Copy className="w-4 h-4 text-accent" />
+                  )}
+                </button>
+              </div>
 
               <a
                 href="mailto:enzogueny30@gmail.com"
