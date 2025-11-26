@@ -1,26 +1,51 @@
-import "react-calendar/dist/Calendar.css";
-
 import { Check, Copy, MapPin, Send } from "lucide-react";
 
 import AvailabilityCalendar from "../components/AvailabilityCalendar";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { CONTACT_INFO } from "../config/contact";
 
 function Home() {
   const [copied, setCopied] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
-  const email = "enzogueny30@gmail.com";
-  const phone = "+33 7 70 50 85 85";
+  const copyTimeoutRef = useRef(null);
+  const copyPhoneTimeoutRef = useRef(null);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  // Cleanup timeouts on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (copyTimeoutRef.current) {
+        clearTimeout(copyTimeoutRef.current);
+      }
+      if (copyPhoneTimeoutRef.current) {
+        clearTimeout(copyPhoneTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_INFO.email);
+      setCopied(true);
+      if (copyTimeoutRef.current) {
+        clearTimeout(copyTimeoutRef.current);
+      }
+      copyTimeoutRef.current = setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy email to clipboard:", error);
+    }
   };
 
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
+  const handleCopyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_INFO.phone);
+      setCopiedPhone(true);
+      if (copyPhoneTimeoutRef.current) {
+        clearTimeout(copyPhoneTimeoutRef.current);
+      }
+      copyPhoneTimeoutRef.current = setTimeout(() => setCopiedPhone(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy phone to clipboard:", error);
+    }
   };
   return (
     <div className="max-w-7xl mx-auto px-2 py-8">
@@ -56,7 +81,7 @@ function Home() {
                 <img
                   className="w-full h-auto rounded"
                   src="/cv-preview.png"
-                  alt="Professional CV Preview"
+                  alt="Enzo Gueny's professional curriculum vitae - Click to view full CV"
                 />
               </a>
             </div>
@@ -75,7 +100,7 @@ function Home() {
                   <img
                     className="w-10 h-10 flex-shrink-0"
                     src="/gw128.png"
-                    alt="GeoWarmup Logo"
+                    alt="GeoWarmup game icon - Fast-paced geography learning game"
                   />
                   <div className="min-w-0">
                     <h4 className="heading-5 text-sm mb-1">geowarmup❚</h4>
@@ -115,7 +140,7 @@ function Home() {
             <div className="space-y-4">
               <div className="text-center">
                 <p className="mono-label mb-2">Daily Rate</p>
-                <p className="heading-2 text-accent">480€</p>
+                <p className="heading-2 text-accent">{CONTACT_INFO.dailyRate}</p>
               </div>
 
               <div className="divider"></div>
@@ -124,22 +149,21 @@ function Home() {
                 <p className="mono-label mb-2">Location</p>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="w-5 h-5 text-accent" />
-                  <p className="heading-5">Lyon</p>
+                  <p className="heading-5">{CONTACT_INFO.location}</p>
                 </div>
               </div>
 
               <div className="divider"></div>
 
-              <div
-                className="bg-black/40 cursor-pointer rounded-lg px-2 py-1 flex items-center justify-between gap-2"
-                onClick={handleCopy}
-              >
+              <div className="bg-black/40 rounded-lg px-2 py-1 flex items-center justify-between gap-2">
                 <code className="text-accent text-sm font-mono flex-grow overflow-x-hidden">
-                  {email}
+                  {CONTACT_INFO.email}
                 </code>
                 <button
+                  onClick={handleCopy}
                   className="p-2 cursor-pointer hover:bg-accent/10 rounded transition-colors flex-shrink-0"
                   title="Copy email"
+                  aria-label="Copy email address to clipboard"
                 >
                   {copied ? (
                     <Check className="w-4 h-4 text-green-400" />
@@ -149,16 +173,15 @@ function Home() {
                 </button>
               </div>
 
-              <div
-                className="bg-black/40 cursor-pointer rounded-lg px-2 py-1 flex items-center justify-between gap-2 whitespace-nowrap"
-                onClick={handleCopyPhone}
-              >
+              <div className="bg-black/40 rounded-lg px-2 py-1 flex items-center justify-between gap-2 whitespace-nowrap">
                 <code className="text-accent text-sm font-mono flex-grow overflow-x-hidden">
-                  {phone}
+                  {CONTACT_INFO.phone}
                 </code>
                 <button
-                  className="p-2 hover:bg-accent/10 rounded transition-colors flex-shrink-0"
+                  onClick={handleCopyPhone}
+                  className="p-2 cursor-pointer hover:bg-accent/10 rounded transition-colors flex-shrink-0"
                   title="Copy phone"
+                  aria-label="Copy phone number to clipboard"
                 >
                   {copiedPhone ? (
                     <Check className="w-4 h-4 text-green-400" />
@@ -169,7 +192,7 @@ function Home() {
               </div>
 
               <a
-                href="mailto:enzogueny30@gmail.com"
+                href={`mailto:${CONTACT_INFO.email}`}
                 className="btn btn-primary animate-pulse-glow w-full"
               >
                 <Send className="w-4 h-4" />
