@@ -845,8 +845,23 @@
   }
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn var(--transition-base) ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
 }
 
 .animate-pulse-glow {
@@ -874,6 +889,33 @@
 }
 .delay-500 {
   animation-delay: 500ms;
+}
+
+/* =============================================
+   SCROLLBAR STYLES
+   ============================================= */
+
+.scrollbar-transparent {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+}
+
+.scrollbar-transparent::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: var(--radius-full);
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.2);
 }
 
 /* =============================================

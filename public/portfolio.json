@@ -1,0 +1,55 @@
+[
+    {
+        "title": "geowarmup",
+        "description": "fast paced geography game",
+        "url": "https://geowarmup.hankiou.com",
+        "tags": [
+            "dev",
+            "web",
+            "ux"
+        ],
+        "tech": [
+            "react",
+            "tailwindcss",
+            "vite"
+        ],
+        "files": [
+            {
+                "path": "/portfolio/gw-1.png",
+                "caption": "demo with flags",
+                "type": "image/png"
+            }
+        ]
+    },
+    {
+        "title": "Cloverfield™",
+        "description": "Hiphen's customer interface. This is the main app I forged my web developper skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
+        "url": null,
+        "tags": [
+            "dev",
+            "web",
+            "ux"
+        ],
+        "tech": [
+            "react",
+            "sass",
+            "rubyonrails",
+            "postgresql",
+            "bootstrap",
+            "leaflet",
+            "figma"
+        ],
+        "files": [
+            {
+                "path": "/portfolio/clov-1.png",
+                "caption": "Worldmap view",
+                "type": "image/png"
+            },
+            {
+                "path": "/portfolio/clov-2.png",
+                "caption": "Analytics: Breeder report",
+                "type": "image/png"
+            }
+        ]
+    }
+]
