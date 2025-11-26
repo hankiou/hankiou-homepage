@@ -1,5 +1,8 @@
+import "react-calendar/dist/Calendar.css";
+
 import { Check, Copy, MapPin, Send } from "lucide-react";
 
+import AvailabilityCalendar from "../components/AvailabilityCalendar";
 import { useState } from "react";
 
 function Home() {
@@ -173,6 +176,29 @@ function Home() {
                 Get in Touch
               </a>
             </div>
+          </div>
+          <div className="text-center mt-4">
+            <p className="mono-label mb-2">Availability</p>
+            <AvailabilityCalendar
+              year={2026}
+              periods={[
+                {
+                  year: 2026,
+                  label: "availability",
+                  startMonth: 2,
+                  endMonth: 9,
+                  type: "primary",
+                },
+                {
+                  year: 2027,
+                  label: "availability",
+                  startMonth: 1,
+                  endMonth: 12,
+                  type: "primary",
+                },
+              ]}
+              variant="default"
+            />
           </div>
         </aside>
       </div>
