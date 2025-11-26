@@ -1,7 +1,7 @@
 import { Check, Copy, MapPin, Send } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import AvailabilityCalendar from "../components/AvailabilityCalendar";
-import { useState, useEffect, useRef } from "react";
 import { CONTACT_INFO } from "../config/contact";
 
 function Home() {
@@ -42,7 +42,10 @@ function Home() {
       if (copyPhoneTimeoutRef.current) {
         clearTimeout(copyPhoneTimeoutRef.current);
       }
-      copyPhoneTimeoutRef.current = setTimeout(() => setCopiedPhone(false), 2000);
+      copyPhoneTimeoutRef.current = setTimeout(
+        () => setCopiedPhone(false),
+        2000
+      );
     } catch (error) {
       console.error("Failed to copy phone to clipboard:", error);
     }
@@ -76,7 +79,7 @@ function Home() {
                 href="https://hankiou.github.io/cv/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card w-[75%] block hover:scale-105 transition-transform overflow-hidden"
+                className="card !p-2 w-[75%] block hover:scale-105 transition-transform overflow-hidden"
               >
                 <img
                   className="w-full h-auto rounded"
@@ -94,17 +97,22 @@ function Home() {
                 href="https://geowarmup.hankiou.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card block"
+                className="card hover:scale-105 transition-transform block overflow-hidden !p-1"
               >
-                <div className="flex items-start gap-3">
+                <img
+                  className="w-full h-24 object-cover object-top rounded-t-lg"
+                  src="/gw-thumbnail.png"
+                  alt="GeoWarmup game header - Fast-paced geography learning game"
+                />
+                <div className="flex items-center gap-3 p-3">
                   <img
-                    className="w-10 h-10 flex-shrink-0"
+                    className="w-10 h-10 flex-shrink-0 shadow-md"
                     src="/gw128.png"
-                    alt="GeoWarmup game icon - Fast-paced geography learning game"
+                    alt="GeoWarmup game icon"
                   />
-                  <div className="min-w-0">
+                  <div className="min-w-0 text-start">
                     <h4 className="heading-5 text-sm mb-1">geowarmup❚</h4>
-                    <p className="body-small">Fast-paced geography game</p>
+                    <p className="body-small">Fast-paced geo game</p>
                   </div>
                 </div>
               </a>
@@ -140,7 +148,9 @@ function Home() {
             <div className="space-y-4">
               <div className="text-center">
                 <p className="mono-label mb-2">Daily Rate</p>
-                <p className="heading-2 text-accent">{CONTACT_INFO.dailyRate}</p>
+                <p className="heading-2 text-accent">
+                  {CONTACT_INFO.dailyRate}
+                </p>
               </div>
 
               <div className="divider"></div>
