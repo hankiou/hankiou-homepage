@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import AvailabilityCalendar from "../components/AvailabilityCalendar";
 import { CONTACT_INFO } from "../config/contact";
+import { TechBadge } from "../components/TechBadge";
 
 function Home() {
   const [copied, setCopied] = useState(false);
@@ -140,6 +141,21 @@ function Home() {
               </p>
             </div>
           </section>
+          <h3 className="heading-3 mb-4">Stack</h3>
+          <div className="flex flex-wrap justify-center gap-2 mt-8">
+            <TechBadge tech="Javascript" />
+            <TechBadge tech="React" />
+            <TechBadge tech="Node.js" />
+            <TechBadge tech="Tailwindcss" />
+            <TechBadge tech="Figma" />
+            <TechBadge tech="Blender" />
+            <TechBadge tech="express" />
+            <TechBadge tech="Rubyonrails" />
+            <TechBadge tech="Docker" />
+            <TechBadge tech="Git" />
+            <TechBadge tech="PostgreSQL" />
+            <TechBadge tech="MongoDB" />
+          </div>
         </main>
 
         {/* Right Column - Daily Rate Box (3/12) */}

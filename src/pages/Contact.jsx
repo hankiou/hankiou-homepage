@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import { SocialIcon } from "react-social-icons";
 
 function Contact() {
   return (
@@ -16,6 +17,10 @@ function Contact() {
 
         <section className="card">
           <h2 className="heading-3 mb-4">Socials</h2>
+          <div className="flex gap-3 justify-center">
+            <SocialIcon url="https://www.linkedin.com/in/enzo-gueny-3b16b9186/" />
+            <SocialIcon url="https://github.com/hankiou" />
+          </div>
         </section>
 
         <section className="card-glow text-center">
