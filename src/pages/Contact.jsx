@@ -20,6 +20,7 @@ function Contact() {
           <div className="flex gap-3 justify-center">
             <SocialIcon url="https://www.linkedin.com/in/enzo-gueny-3b16b9186/" />
             <SocialIcon url="https://github.com/hankiou" />
+            <SocialIcon url="https://www.patreon.com/Hankiou" />
           </div>
         </section>
 
