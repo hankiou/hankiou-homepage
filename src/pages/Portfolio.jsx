@@ -40,6 +40,15 @@ function Portfolio() {
     [portfolioData, selectedTags]
   );
 
+  // Separate featured and non-featured items, sort non-featured by year
+  const { featuredItems, regularItems } = useMemo(() => {
+    const featured = filteredItems.filter(item => item.featured);
+    const regular = filteredItems
+      .filter(item => !item.featured)
+      .sort((a, b) => (b.year || 0) - (a.year || 0)); // Sort by year descending
+    return { featuredItems: featured, regularItems: regular };
+  }, [filteredItems]);
+
   // Toggle tag selection
   const toggleTag = (tag) => {
     setSelectedTags((prev) =>
@@ -100,15 +109,47 @@ function Portfolio() {
 
       {/* Portfolio Grid */}
       {!loading && !error && filteredItems.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <PortfolioCard
-              key={item.title}
-              item={item}
-              onClick={() => setSelectedItem(item)}
-            />
-          ))}
-        </div>
+        <>
+          {/* Featured Section */}
+          {featuredItems.length > 0 && (
+            <>
+              <div className="mb-6">
+                <h2 className="heading-2 text-center mb-6">Featured</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {featuredItems.map((item) => (
+                    <PortfolioCard
+                      key={item.title}
+                      item={item}
+                      onClick={() => setSelectedItem(item)}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Divider */}
+              {regularItems.length > 0 && (
+                <div className="my-12 flex items-center justify-center">
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+                  <span className="px-4 mono-label text-slate-400">All Projects</span>
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* Regular Items (Sorted by Year) */}
+          {regularItems.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {regularItems.map((item) => (
+                <PortfolioCard
+                  key={item.title}
+                  item={item}
+                  onClick={() => setSelectedItem(item)}
+                />
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       {/* Modal */}

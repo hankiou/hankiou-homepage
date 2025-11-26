@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
-import { X, ExternalLink } from 'lucide-react';
-import { TagBadge } from './TagBadge';
-import { TechBadge } from './TechBadge';
-import { getFileType } from '../utils/portfolioHelpers';
+import { ExternalLink, X } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+import { TagBadge } from "./TagBadge";
+import { TechBadge } from "./TechBadge";
+import { getFileType } from "../utils/portfolioHelpers";
 
 export const PortfolioModal = ({ item, onClose }) => {
   const modalRef = useRef(null);
@@ -11,16 +12,18 @@ export const PortfolioModal = ({ item, onClose }) => {
   // ESC key handler
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
 
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
   }, [onClose]);
 
   // Focus management
   useEffect(() => {
-    const closeButton = modalRef.current?.querySelector('button[aria-label="Close modal"]');
+    const closeButton = modalRef.current?.querySelector(
+      'button[aria-label="Close modal"]'
+    );
     closeButton?.focus();
 
     return () => {
@@ -49,7 +52,7 @@ export const PortfolioModal = ({ item, onClose }) => {
       >
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 z-10 p-2 hover:bg-slate-800 rounded-lg transition-colors bg-slate-900/80 backdrop-blur"
+          className="absolute top-8 right-8 z-10 p-2 hover:bg-slate-800 rounded-lg transition-colors bg-slate-900/80 backdrop-blur"
           onClick={onClose}
           aria-label="Close modal"
         >
@@ -65,25 +68,35 @@ export const PortfolioModal = ({ item, onClose }) => {
                 <div key={index} className="space-y-2">
                   {/* Image or Video */}
                   <div className="relative rounded-lg overflow-hidden">
-                    {getFileType(file.type) === 'image' ? (
+                    {getFileType(file.type) === "image" ? (
                       <img
                         src={file.path}
-                        alt={file.caption || `${item.title} - image ${index + 1}`}
-                        className="w-full h-auto"
+                        alt={
+                          file.caption || `${item.title} - image ${index + 1}`
+                        }
+                        className="w-full h-auto max-h-[75dvh] object-contain"
                         loading="lazy"
                       />
-                    ) : getFileType(file.type) === 'video' ? (
-                      <video src={file.path} controls className="w-full h-auto" />
+                    ) : getFileType(file.type) === "video" ? (
+                      <video
+                        src={file.path}
+                        controls
+                        className="w-full h-auto max-h-[75dvh]"
+                      />
                     ) : (
                       <div className="aspect-video flex items-center justify-center bg-slate-800">
-                        <p className="mono-text text-slate-400">Unsupported file type</p>
+                        <p className="mono-text text-slate-400">
+                          Unsupported file type
+                        </p>
                       </div>
                     )}
                   </div>
 
                   {/* Caption below each file */}
                   {file.caption && (
-                    <p className="mono-text text-sm text-slate-400 px-2">{file.caption}</p>
+                    <p className="mono-text text-sm text-slate-400 px-2">
+                      {file.caption}
+                    </p>
                   )}
                 </div>
               ))}
@@ -96,7 +109,9 @@ export const PortfolioModal = ({ item, onClose }) => {
               <h2 id="modal-title" className="heading-3 mb-4">
                 {item.title}
               </h2>
-              <p className="body-base text-slate-300 mb-6">{item.description}</p>
+              <p className="body-base text-slate-300 mb-6">
+                {item.description}
+              </p>
 
               {item.url && (
                 <a
@@ -113,7 +128,7 @@ export const PortfolioModal = ({ item, onClose }) => {
               {item.tags && item.tags.length > 0 && (
                 <div className="mb-6">
                   <h3 className="mono-label mb-3">TAGS</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {item.tags.map((tag) => (
                       <TagBadge key={tag} tag={tag} />
                     ))}
@@ -124,7 +139,7 @@ export const PortfolioModal = ({ item, onClose }) => {
               {item.tech && item.tech.length > 0 && (
                 <div>
                   <h3 className="mono-label mb-3">TECH STACK</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {item.tech.map((tech) => (
                       <TechBadge key={tech} tech={tech} />
                     ))}

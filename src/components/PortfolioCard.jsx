@@ -18,10 +18,20 @@ export const PortfolioCard = ({ item, onClick }) => {
               className="w-full h-full object-cover"
               loading="lazy"
             />
+            {/* Year Badge */}
+            {item.year && (
+              <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 rounded">
+                <span className="mono-label text-xs text-slate-300">
+                  {item.year}
+                </span>
+              </div>
+            )}
             {/* Overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity">
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="body-small text-primary line-clamp-3">{item.description}</p>
+                <p className="body-small text-primary line-clamp-3">
+                  {item.description}
+                </p>
               </div>
             </div>
           </>
@@ -39,7 +49,7 @@ export const PortfolioCard = ({ item, onClick }) => {
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {item.tags.map((tag) => (
-            <TagBadge key={tag} tag={tag} iconVisible={false} />
+            <TagBadge key={tag} tag={tag} />
           ))}
         </div>
       </div>

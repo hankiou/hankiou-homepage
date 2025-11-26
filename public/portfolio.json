@@ -1,55 +1,316 @@
 [
-    {
-        "title": "geowarmup",
-        "description": "fast paced geography game",
-        "url": "https://geowarmup.hankiou.com",
-        "tags": [
-            "dev",
-            "web",
-            "ux"
-        ],
-        "tech": [
-            "react",
-            "tailwindcss",
-            "vite"
-        ],
-        "files": [
-            {
-                "path": "/portfolio/gw-1.png",
-                "caption": "demo with flags",
-                "type": "image/png"
-            }
-        ]
-    },
-    {
-        "title": "Cloverfield™",
-        "description": "Hiphen's customer interface. This is the main app I forged my web developper skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
-        "url": null,
-        "tags": [
-            "dev",
-            "web",
-            "ux"
-        ],
-        "tech": [
-            "react",
-            "sass",
-            "rubyonrails",
-            "postgresql",
-            "bootstrap",
-            "leaflet",
-            "figma"
-        ],
-        "files": [
-            {
-                "path": "/portfolio/clov-1.png",
-                "caption": "Worldmap view",
-                "type": "image/png"
-            },
-            {
-                "path": "/portfolio/clov-2.png",
-                "caption": "Analytics: Breeder report",
-                "type": "image/png"
-            }
-        ]
-    }
+  {
+    "title": "geowarmup❚",
+    "description": "geowarmup❚ is a geography and typing game that rewards fast typing and knowledge.",
+    "url": "https://geowarmup.hankiou.com",
+    "tags": ["dev", "web", "ux"],
+    "tech": ["react", "tailwindcss", "vite"],
+    "year": 2025,
+    "featured": true,
+    "files": [
+      {
+        "path": "/portfolio/geowarmup/main.png",
+        "caption": "This is geowarmup landing page",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/geowarmup/2.png",
+        "caption": "Many alternative maps implemented",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/geowarmup/3.png",
+        "caption": "Runs history and performance per gamemode",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/geowarmup/4.png",
+        "caption": "Can you guess this flag ? Many unlocked medals on the left (my own save in french)",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/geowarmup/5.png",
+        "caption": "Global stats",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/geowarmup/1.png",
+        "caption": "Example of the // country on the map // gamemode, with non-UN nations",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Cloverfield™",
+    "description": "Hiphen's customer interface. This is the main app I forged my web developper skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
+    "url": null,
+    "tags": ["dev", "web", "ux"],
+    "tech": [
+      "react",
+      "sass",
+      "rubyonrails",
+      "postgresql",
+      "bootstrap",
+      "leaflet",
+      "figma"
+    ],
+    "year": 2024,
+    "featured": true,
+    "files": [
+      {
+        "path": "/portfolio/clov-1.png",
+        "caption": "Worldmap view",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/clov-2.png",
+        "caption": "Analytics: Breeder report",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Dofus Games",
+    "description": "Fan-made minigame inspired by the Dofus universe, featuring guess all bosses from memory",
+    "url": null,
+    "tags": ["dev", "web"],
+    "tech": ["react"],
+    "year": 2023,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/dofusgames/dg-1.PNG",
+        "caption": "Guess all bosses",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/dofusgames/dg-2.PNG",
+        "caption": "If you give up",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Loot² UI",
+    "description": "A few interfaces I made for the game of a friend of mine",
+    "url": null,
+    "tags": ["ux", "web"],
+    "tech": ["figma"],
+    "year": 2025,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Loot²/Group 26.png",
+        "caption": "UI components and interface design",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Loot²/Action infobulle.png",
+        "caption": "In-game action tooltips and village scenes",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Grapnel Character Concepts",
+    "description": "Character design concepts for a steampunk-themed game project featuring mechanical humanoid designs",
+    "url": null,
+    "tags": ["digital drawing", "paper drawing", "gamedev"],
+    "tech": [],
+    "year": 2021,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Grapnel char concepts/char1.png",
+        "caption": "Steampunk character concept - mechanical design",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Grapnel char concepts/IMG_20211117_173413.jpg",
+        "caption": "Early sketches and iterations",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Grapnel char concepts/IMG_20211118_145256.jpg",
+        "caption": "Steampunk map background concept",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Grapnel char concepts/IMG_20211118_144937.jpg",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Mushroom Pixel Art",
+    "description": "Pixel art illustration of a classic red mushroom with detailed shading and form",
+    "url": null,
+    "tags": ["pixelart", "handcraft"],
+    "tech": ["aseprite"],
+    "year": 2021,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Mushroom/mushroom.PNG",
+        "caption": "Red mushroom pixel art",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Mushroom/original_912ccba6-271a-4d9b-bcaf-2691317b7857_IMG_20210915_205655_01.jpg",
+        "caption": "The version I knitted",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Amsterdam Asset Pack",
+    "description": "Pixel art assets inspired by Amsterdam street furniture including bikes, benches, and urban elements",
+    "url": null,
+    "tags": ["pixelart", "gamedev"],
+    "tech": [],
+    "year": 2021,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Pixel art assets _amsterdam_.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Stream Overlay Pack",
+    "description": "Custom streaming overlay design with all needed assets and webcam frames",
+    "url": null,
+    "tags": ["pixelart"],
+    "tech": ["aseprite", "obsstudio"],
+    "year": 2020,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/stream overlay/stream-overlay.PNG",
+        "caption": "Streaming overlay with stats and webcam frames",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/stream overlay/Streamer pack.png",
+        "caption": "Complete streamer pack components featuring emotes and sub badges",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Characters training",
+    "description": "Character design and anatomy studies exploring different poses and proportions",
+    "url": null,
+    "tags": ["paper drawing"],
+    "tech": [],
+    "year": 2020,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Characters/char2.jpg",
+        "caption": "Character design study",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Characters/study.jpg",
+        "caption": "Anatomical study sketches",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Expression Studies",
+    "description": "Facial expression studies capturing different emotions and character moments",
+    "url": null,
+    "tags": ["paper drawing"],
+    "tech": [],
+    "year": 2025,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Expression study/girl1.jfif",
+        "caption": "Expression study",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Expression study/girl2.jfif",
+        "caption": "Character expression sketch",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Faces",
+    "description": "Portrait and facial structure studies from life and imagination",
+    "url": null,
+    "tags": ["paper drawing", "digital drawing"],
+    "tech": [],
+    "year": 2020,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/Faces/faces.jpg",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Faces/IMG_20200723_124034.jpg",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Faces/IMG_20200723_124217.jpg",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/Faces/face.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Cloth Study",
+    "description": "Fabric and drapery study exploring cloth folds and textile rendering",
+    "url": null,
+    "tags": ["paper drawing"],
+    "tech": [],
+    "year": 2025,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/cloth study.jpg",
+        "caption": "Cloth and fabric study",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Pingu party card sprites",
+    "description": "Pixel art sprites I made for a pingu party clone game in university",
+    "url": null,
+    "tags": ["pixelart"],
+    "tech": ["aseprite"],
+    "year": 2018,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/PinguSprites.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Old grandma's lamp",
+    "description": "3D render of my desk lamp",
+    "url": null,
+    "tags": ["3D"],
+    "tech": ["blender"],
+    "year": 2025,
+    "featured": false,
+    "files": [
+      {
+        "path": "/portfolio/lamp.png",
+        "type": "image/png"
+      }
+    ]
+  }
 ]

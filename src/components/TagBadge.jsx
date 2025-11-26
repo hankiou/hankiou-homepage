@@ -1,8 +1,13 @@
 import {
   Box,
+  Brush,
   Code2,
+  DraftingCompass,
+  Gamepad2,
   Globe,
+  Image,
   Palette,
+  Pen,
   Sparkles,
   WandSparkles,
 } from "lucide-react";
@@ -13,8 +18,14 @@ const TAG_ICONS = {
   dev: Code2,
   web: Globe,
   ux: WandSparkles,
-  design: Palette,
-  "3d": Box,
+  "3D": Box,
+  game: Gamepad2,
+  art: Palette,
+  pixelart: Image,
+  gamedev: Gamepad2,
+  "paper drawing": Pen,
+  "digital drawing": Brush,
+  handcraft: DraftingCompass,
 };
 
 const getTagIcon = (tag) => {
