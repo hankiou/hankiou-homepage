@@ -9,13 +9,13 @@ export const PortfolioCard = ({ item, onClick }) => {
       onClick={onClick}
     >
       {/* Thumbnail Image */}
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative overflow-hidden">
         {thumbnailFile ? (
           <>
             <img
               src={thumbnailFile.path}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
               loading="lazy"
             />
             {/* Year Badge */}

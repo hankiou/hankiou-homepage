@@ -72,7 +72,7 @@
   {
     "title": "Dofus Games",
     "description": "Fan-made minigame inspired by the Dofus universe, featuring guess all bosses from memory",
-    "url": null,
+    "url": "https://dofus-games.onrender.com/",
     "tags": ["dev", "web"],
     "tech": ["react"],
     "year": 2023,

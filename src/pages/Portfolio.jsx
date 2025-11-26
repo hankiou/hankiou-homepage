@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import Masonry from 'react-masonry-css';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { TagBadge } from '../components/TagBadge';
 import { PortfolioCard } from '../components/PortfolioCard';
@@ -54,6 +55,13 @@ function Portfolio() {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
+  };
+
+  // Masonry breakpoint configuration
+  const breakpointColumns = {
+    default: 3,
+    1024: 2,
+    640: 1
   };
 
   return (
@@ -115,15 +123,20 @@ function Portfolio() {
             <>
               <div className="mb-6">
                 <h2 className="heading-2 text-center mb-6">Featured</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Masonry
+                  breakpointCols={breakpointColumns}
+                  className="my-masonry-grid"
+                  columnClassName="my-masonry-grid_column"
+                >
                   {featuredItems.map((item) => (
-                    <PortfolioCard
-                      key={item.title}
-                      item={item}
-                      onClick={() => setSelectedItem(item)}
-                    />
+                    <div key={item.title}>
+                      <PortfolioCard
+                        item={item}
+                        onClick={() => setSelectedItem(item)}
+                      />
+                    </div>
                   ))}
-                </div>
+                </Masonry>
               </div>
 
               {/* Divider */}
@@ -139,15 +152,20 @@ function Portfolio() {
 
           {/* Regular Items (Sorted by Year) */}
           {regularItems.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Masonry
+              breakpointCols={breakpointColumns}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
               {regularItems.map((item) => (
-                <PortfolioCard
-                  key={item.title}
-                  item={item}
-                  onClick={() => setSelectedItem(item)}
-                />
+                <div key={item.title}>
+                  <PortfolioCard
+                    item={item}
+                    onClick={() => setSelectedItem(item)}
+                  />
+                </div>
               ))}
-            </div>
+            </Masonry>
           )}
         </>
       )}
