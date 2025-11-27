@@ -72,14 +72,39 @@
     "thumbnail": "/portfolio/thumbnails/cloverfield.webp",
     "files": [
       {
-        "path": "/portfolio/clov-1.png",
+        "path": "/portfolio/Cloverfield/clov-1.png",
         "caption": "Worldmap view",
         "type": "image/png"
       },
       {
-        "path": "/portfolio/clov-2.png",
+        "path": "/portfolio/Cloverfield/clov-2.png",
         "caption": "Analytics: Breeder report",
         "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Cloverfield/clov-3.png",
+        "caption": "Analytics: Principal component analysis",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Cloverfield/clov-4.png",
+        "caption": "Analytics: ANOVA",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Cloverfield/clov-5.png",
+        "caption": "Glossary: the cataog of traits delivered by hiphen",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Cloverfield/clov-6.png",
+        "caption": "Monitoring: Manage advancement of campaign, communication between hiphen and customers",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Cloverfield/ux.svg",
+        "caption": "World map revamping UX, one of my most important design files made in Hiphen",
+        "type": "image/svg"
       }
     ]
   },
@@ -384,7 +409,7 @@
     ]
   },
   {
-    "title": "Phenostation M",
+    "title": "Phenostation™ Moët",
     "description": "An interface to be embedded on a grape phenotyping system. It is required to work fast in busy environment. It involved creating a 'kiosk' web interface that interacts in real time with centralized express service, saving data in a postgresql db. Everything has been contenerized using docker",
     "url": null,
     "tags": [
@@ -404,7 +429,7 @@
     ],
     "year": 2023,
     "featured": true,
-    "thumbnail": "/portfolio/thumbnails/phenostation-m.webp",
+    "thumbnail": "/portfolio/thumbnails/phenostation-moet.webp",
     "files": [
       {
         "path": "/portfolio/Phenostation M/1.jpeg",
@@ -450,6 +475,98 @@
         "path": "/portfolio/Phenostation M/9.svg",
         "type": "image/svg+xml",
         "caption": "Initial specification wireframe"
+      }
+    ]
+  },
+  {
+    "title": "Model Validation Report",
+    "description": "Interactive validation interface for AI model performance analysis and quality assurance testing",
+    "url": null,
+    "tags": [
+      "dev",
+      "web",
+      "ux"
+    ],
+    "tech": [
+      "React",
+      "MUI",
+      "express",
+      "sequelize",
+      "postgresql"
+    ],
+    "year": 2023,
+    "featured": false,
+    "thumbnail": "/portfolio/thumbnails/model-validation-report.webp",
+    "files": [
+      {
+        "path": "/portfolio/MVR/mvr-1.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "path": "/portfolio/MVR/mvr-2.jpeg",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Phenolin™",
+    "description": "An interface to be embedded on a flax phenotyping system. It is required to work fast in busy environment. It involved creating a 'kiosk' web interface that interacts in real time with centralized express service, saving data in a postgresql db. Everything has been contenerized using docker",
+    "url": null,
+    "tags": [
+      "dev",
+      "web",
+      "ux"
+    ],
+    "tech": [
+      "React",
+      "MUI",
+      "express",
+      "postgresql",
+      "prisma",
+      "docker",
+      "figma"
+    ],
+    "year": 2025,
+    "featured": false,
+    "thumbnail": "/portfolio/thumbnails/phenolin.webp",
+    "files": [
+      {
+        "path": "/portfolio/Phenolin/1.png",
+        "type": "image/png",
+        "caption": "Phenolin interface overview"
+      },
+      {
+        "path": "/portfolio/Phenolin/2.png",
+        "type": "image/png",
+        "caption": "Event log"
+      },
+      {
+        "path": "/portfolio/Phenolin/3.png",
+        "type": "image/png",
+        "caption": "Bundles management"
+      },
+      {
+        "path": "/portfolio/Phenolin/5.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Phenolin/6.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/Phenolin/context.png",
+        "type": "image/png",
+        "caption": "Interface in production context"
+      },
+      {
+        "path": "/portfolio/Phenolin/phenolin-iteration-2.svg",
+        "type": "image/svg+xml",
+        "caption": "Final design iteration"
+      },
+      {
+        "path": "/portfolio/Phenolin/phenolin-iteration-1.svg",
+        "type": "image/svg+xml",
+        "caption": "Initial design iterations"
       }
     ]
   }
