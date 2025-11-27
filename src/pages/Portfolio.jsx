@@ -6,6 +6,7 @@ import { PortfolioCard } from '../components/PortfolioCard';
 import { PortfolioModal } from '../components/PortfolioModal';
 import { filterByTags } from '../utils/portfolioHelpers';
 import { TAGS } from '../config/tags';
+import { SEO } from '../components/SEO';
 
 function Portfolio() {
   const [portfolioData, setPortfolioData] = useState([]);
@@ -64,12 +65,32 @@ function Portfolio() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      {/* Header Section */}
-      <div className="bg-blueprint-fade py-12 px-8 rounded-lg mb-12 text-center">
-        <h1 className="heading-1 mb-4">Portfolio</h1>
-        <p className="mono-label">SELECTED WORKS & PROJECTS</p>
-      </div>
+    <>
+      <SEO
+        title="Portfolio - Enzo GUENY | Full-Stack Developer Projects"
+        description="Explore Enzo GUENY's portfolio featuring web applications, UI/UX design, pixel art, and development projects. Includes GeoWarmup, Cloverfield, Phenostation, and more creative works."
+        keywords="portfolio, web development projects, React applications, UI/UX design, pixel art, game development, full-stack projects, Enzo GUENY portfolio"
+        url="https://hankiou.com/portfolio"
+        image="https://hankiou.com/gw-thumbnail.png"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Portfolio - Enzo GUENY",
+          "description": "Portfolio showcasing web development, UI/UX design, and creative projects",
+          "url": "https://hankiou.com/portfolio",
+          "author": {
+            "@type": "Person",
+            "name": "Enzo GUENY",
+            "url": "https://hankiou.com"
+          }
+        }}
+      />
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* Header Section */}
+        <div className="bg-blueprint-fade py-12 px-8 rounded-lg mb-12 text-center">
+          <h1 className="heading-1 mb-4">Portfolio</h1>
+          <p className="mono-label">SELECTED WORKS & PROJECTS</p>
+        </div>
 
       {/* Tag Filter Section */}
       <div className="mb-8">
@@ -164,11 +185,12 @@ function Portfolio() {
         </>
       )}
 
-      {/* Modal */}
-      {selectedItem && (
-        <PortfolioModal item={selectedItem} onClose={() => setSelectedItem(null)} />
-      )}
-    </div>
+        {/* Modal */}
+        {selectedItem && (
+          <PortfolioModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+        )}
+      </div>
+    </>
   );
 }
 

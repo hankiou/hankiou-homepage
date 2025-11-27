@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://hankiou.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hankiou.com/preview.png</image:loc>
+      <image:title>Enzo GUENY - Full-Stack Developer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hankiou.com/gw-thumbnail.png</image:loc>
+      <image:title>GeoWarmup - Geography Game</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://hankiou.com/about</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://hankiou.com/portfolio</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hankiou.com/gw-thumbnail.png</image:loc>
+      <image:title>Portfolio Projects</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hankiou.com/contact</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hankiou.com/privacy</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://hankiou.com/terms</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

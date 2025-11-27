@@ -7,8 +7,8 @@ function Navigation() {
   return (
     <div className="sticky top-0 z-50 py-2">
       <nav className="card !p-2">
-        <div className="flex items-center justify-between px-4">
-          <NavLink to="/" className="mono-accent heading-5">
+        <div className="flex items-center justify-between">
+          <NavLink to="/" className="mono-accent heading-5 ml-4">
             hankiou.com
           </NavLink>
 

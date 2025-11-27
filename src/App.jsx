@@ -3,6 +3,7 @@ import "./App.css";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { Analytics } from "@vercel/analytics/react";
+import { Breadcrumb } from "./components/Breadcrumb";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
+        <Breadcrumb />
         <Footer />
       </div>
     </Router>

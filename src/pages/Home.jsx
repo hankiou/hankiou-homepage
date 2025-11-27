@@ -74,7 +74,7 @@ function Home() {
         {/* Left Column - Projects (3/12) */}
         <aside className="md:col-span-3">
           <section className="md:top-24">
-            <h3 className="heading-5 mb-4">Conventional CV</h3>
+            <h2 className="heading-6 mb-4">Conventional CV</h2>
             <div className="space-y-3 flex flex-col items-center">
               <a
                 href="https://hankiou.github.io/cv/"
@@ -92,7 +92,7 @@ function Home() {
           </section>
 
           <section className="mt-8">
-            <h3 className="heading-5 mb-4">Side Projects</h3>
+            <h2 className="heading-6 mb-4">Side Projects</h2>
             <div className="space-y-4">
               <a
                 href="https://geowarmup.hankiou.com"
@@ -112,7 +112,7 @@ function Home() {
                     alt="GeoWarmup game icon"
                   />
                   <div className="min-w-0 text-start">
-                    <h4 className="heading-5 text-sm mb-1">geowarmup❚</h4>
+                    <h3 className="heading-6 text-sm mb-1">geowarmup❚</h3>
                     <p className="body-small">Fast-paced geo game</p>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ function Home() {
         {/* Middle Column - About My Work (6/12) */}
         <main className="md:col-span-6">
           <section className="mb-12">
-            <h3 className="heading-3 mb-4">About My Work</h3>
+            <h2 className="heading-3 mb-4">About My Work</h2>
             <div className="space-y-4">
               <p className="body-base">
                 As a developer, I focus on creating{" "}
@@ -153,7 +153,7 @@ function Home() {
             </div>
           </section>
           <section className="mb-12">
-            <h3 className="heading-3 mb-4">Stack</h3>
+            <h2 className="heading-3 mb-4">Stack</h2>
             <div className="flex flex-wrap justify-center gap-2 mt-8">
               <TechBadge tech="Javascript" />
               <TechBadge tech="React" />
@@ -170,7 +170,7 @@ function Home() {
             </div>
           </section>
           <div className="card mt-8 space-y-4">
-            <p className="heading-5">My opinion on Artificial Intelligence</p>
+            <h2 className="heading-5">My opinion on Artificial Intelligence</h2>
             <p className="body-base">
               LLMs for coding are evolving at an incredible rate and I estimate
               that they are mandatory tools that programmers have to master. I
