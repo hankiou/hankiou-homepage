@@ -3,8 +3,16 @@
     "title": "geowarmup❚",
     "description": "geowarmup❚ is a geography and typing game that rewards fast typing and knowledge.",
     "url": "https://geowarmup.hankiou.com",
-    "tags": ["dev", "web", "ux"],
-    "tech": ["react", "tailwindcss", "vite"],
+    "tags": [
+      "dev",
+      "web",
+      "ux"
+    ],
+    "tech": [
+      "react",
+      "tailwindcss",
+      "vite"
+    ],
     "year": 2025,
     "featured": true,
     "thumbnail": "/portfolio/thumbnails/geowarmup.webp",
@@ -45,7 +53,11 @@
     "title": "Cloverfield™",
     "description": "Hiphen's customer interface. This is the main app I forged my web developper skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
     "url": null,
-    "tags": ["dev", "web", "ux"],
+    "tags": [
+      "dev",
+      "web",
+      "ux"
+    ],
     "tech": [
       "react",
       "sass",
@@ -75,8 +87,13 @@
     "title": "Dofus Games",
     "description": "Fan-made minigame inspired by the Dofus universe, featuring guess all bosses from memory",
     "url": "https://dofus-games.onrender.com/",
-    "tags": ["dev", "web"],
-    "tech": ["react"],
+    "tags": [
+      "dev",
+      "web"
+    ],
+    "tech": [
+      "react"
+    ],
     "year": 2023,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/dofus-games.webp",
@@ -97,8 +114,13 @@
     "title": "Loot² UI",
     "description": "A few interfaces I made for the game of a friend of mine",
     "url": null,
-    "tags": ["ux", "web"],
-    "tech": ["figma"],
+    "tags": [
+      "ux",
+      "web"
+    ],
+    "tech": [
+      "figma"
+    ],
     "year": 2025,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/loot2-ui.webp",
@@ -119,7 +141,11 @@
     "title": "Grapnel Character Concepts",
     "description": "Character design concepts for a steampunk-themed game project featuring mechanical humanoid designs",
     "url": null,
-    "tags": ["digital drawing", "paper drawing", "gamedev"],
+    "tags": [
+      "digital drawing",
+      "paper drawing",
+      "gamedev"
+    ],
     "tech": [],
     "year": 2021,
     "featured": false,
@@ -150,8 +176,13 @@
     "title": "Mushroom Pixel Art",
     "description": "Pixel art illustration of a classic red mushroom with detailed shading and form",
     "url": null,
-    "tags": ["pixelart", "handcraft"],
-    "tech": ["aseprite"],
+    "tags": [
+      "pixelart",
+      "handcraft"
+    ],
+    "tech": [
+      "aseprite"
+    ],
     "year": 2021,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/mushroom-pixel-art.webp",
@@ -172,7 +203,10 @@
     "title": "Amsterdam Asset Pack",
     "description": "Pixel art assets inspired by Amsterdam street furniture including bikes, benches, and urban elements",
     "url": null,
-    "tags": ["pixelart", "gamedev"],
+    "tags": [
+      "pixelart",
+      "gamedev"
+    ],
     "tech": [],
     "year": 2021,
     "featured": false,
@@ -188,8 +222,13 @@
     "title": "Stream Overlay Pack",
     "description": "Custom streaming overlay design with all needed assets and webcam frames",
     "url": null,
-    "tags": ["pixelart"],
-    "tech": ["aseprite", "obsstudio"],
+    "tags": [
+      "pixelart"
+    ],
+    "tech": [
+      "aseprite",
+      "obsstudio"
+    ],
     "year": 2020,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/stream-overlay-pack.webp",
@@ -210,7 +249,9 @@
     "title": "Characters training",
     "description": "Character design and anatomy studies exploring different poses and proportions",
     "url": null,
-    "tags": ["paper drawing"],
+    "tags": [
+      "paper drawing"
+    ],
     "tech": [],
     "year": 2020,
     "featured": false,
@@ -232,7 +273,9 @@
     "title": "Expression Studies",
     "description": "Facial expression studies capturing different emotions and character moments",
     "url": null,
-    "tags": ["paper drawing"],
+    "tags": [
+      "paper drawing"
+    ],
     "tech": [],
     "year": 2025,
     "featured": false,
@@ -254,7 +297,10 @@
     "title": "Faces",
     "description": "Portrait and facial structure studies from life and imagination",
     "url": null,
-    "tags": ["paper drawing", "digital drawing"],
+    "tags": [
+      "paper drawing",
+      "digital drawing"
+    ],
     "tech": [],
     "year": 2020,
     "featured": false,
@@ -282,7 +328,9 @@
     "title": "Cloth Study",
     "description": "Fabric and drapery study exploring cloth folds and textile rendering",
     "url": null,
-    "tags": ["paper drawing"],
+    "tags": [
+      "paper drawing"
+    ],
     "tech": [],
     "year": 2025,
     "featured": false,
@@ -299,8 +347,12 @@
     "title": "Pingu party card sprites",
     "description": "Pixel art sprites I made for a pingu party clone game in university",
     "url": null,
-    "tags": ["pixelart"],
-    "tech": ["aseprite"],
+    "tags": [
+      "pixelart"
+    ],
+    "tech": [
+      "aseprite"
+    ],
     "year": 2018,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/pingu-party-card-sprites.webp",
@@ -315,8 +367,12 @@
     "title": "Old grandma's lamp",
     "description": "3D render of my desk lamp",
     "url": null,
-    "tags": ["3D"],
-    "tech": ["blender"],
+    "tags": [
+      "3D"
+    ],
+    "tech": [
+      "blender"
+    ],
     "year": 2025,
     "featured": false,
     "thumbnail": "/portfolio/thumbnails/old-grandmas-lamp.webp",
@@ -324,6 +380,76 @@
       {
         "path": "/portfolio/lamp.png",
         "type": "image/png"
+      }
+    ]
+  },
+  {
+    "title": "Phenostation M",
+    "description": "An interface to be embedded on a grape phenotyping system. It is required to work fast in busy environment. It involved creating a 'kiosk' web interface that interacts in real time with centralized express service, saving data in a postgresql db. Everything has been contenerized using docker",
+    "url": null,
+    "tags": [
+      "dev",
+      "web",
+      "ux"
+    ],
+    "tech": [
+      "react",
+      "MUI",
+      "CSS",
+      "express",
+      "postgresql",
+      "Socket.io",
+      "Docker",
+      "figma"
+    ],
+    "year": 2023,
+    "featured": true,
+    "thumbnail": "/portfolio/thumbnails/phenostation-m.webp",
+    "files": [
+      {
+        "path": "/portfolio/Phenostation M/1.jpeg",
+        "type": "image/jpeg",
+        "caption": "Interface in working state, grapes are being processed"
+      },
+      {
+        "path": "/portfolio/Phenostation M/2.jpeg",
+        "type": "image/jpeg",
+        "caption": "Crates are segmented and detected classes are displayed above using canvas"
+      },
+      {
+        "path": "/portfolio/Phenostation M/3.jpeg",
+        "type": "image/jpeg",
+        "caption": "Error handling"
+      },
+      {
+        "path": "/portfolio/Phenostation M/4.jpeg",
+        "type": "image/jpeg",
+        "caption": "Graph showing all given notations during phenotyping campaign"
+      },
+      {
+        "path": "/portfolio/Phenostation M/5.jpeg",
+        "type": "image/jpeg",
+        "caption": "Large segmentation canvas"
+      },
+      {
+        "path": "/portfolio/Phenostation M/6.mp4",
+        "type": "video/mp4",
+        "caption": "CSS only animation to display while grape is being processed"
+      },
+      {
+        "path": "/portfolio/Phenostation M/7.jpg",
+        "type": "image/jpeg",
+        "caption": "Big picture of the context for this interface"
+      },
+      {
+        "path": "/portfolio/Phenostation M/8.jpeg",
+        "type": "image/jpeg",
+        "caption": "Central overview of all systems"
+      },
+      {
+        "path": "/portfolio/Phenostation M/9.svg",
+        "type": "image/svg+xml",
+        "caption": "Initial specification wireframe"
       }
     ]
   }
