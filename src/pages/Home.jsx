@@ -63,7 +63,7 @@ function Home() {
           [ FULL-STACK DEVELOPER ]
         </p>
         <p className="body-large max-w-2xl mx-auto animate-fade-in delay-300">
-          Combining expertise in software development with creativity and
+          Combining expertise in software engineering with creativity and
           cutting-edge technology to deliver valuable applications in short
           delays
         </p>
