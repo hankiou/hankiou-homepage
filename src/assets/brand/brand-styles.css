@@ -920,6 +920,43 @@
 }
 
 /* =============================================
+   IMAGE ZOOM OVERLAY (react-medium-image-zoom)
+   ============================================= */
+
+/* Override white background with glassmorphism */
+[data-rmiz-modal-overlay="hidden"] {
+  background-color: rgba(2, 6, 23, 0) !important;
+}
+
+[data-rmiz-modal-overlay="visible"] {
+  background-color: rgba(2, 6, 23, 0.4) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* Style the modal container */
+[data-rmiz-modal][open] {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+/* Hide the zoom button in top right corner */
+[data-rmiz-btn-unzoom] {
+  display: none !important;
+}
+
+/* Remove cursor changes - keep default cursor */
+[data-rmiz-content="found"] img,
+[data-rmiz-content="found"] svg,
+[data-rmiz-content="found"] [role="img"],
+[data-rmiz-content="found"] [data-zoom] {
+  cursor: default !important;
+}
+
+[data-rmiz-modal-content],
+[data-rmiz-modal-img] {
+  cursor: default !important;
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 

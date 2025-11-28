@@ -1,5 +1,7 @@
 import { ExternalLink, X } from "lucide-react";
 import { useEffect, useRef } from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 import { TagBadge } from "./TagBadge";
 import { TechBadge } from "./TechBadge";
@@ -118,14 +120,16 @@ export const PortfolioModal = ({ item, onClose }) => {
                   {/* Image or Video */}
                   <div className="relative rounded-lg overflow-hidden">
                     {getFileType(file.type) === "image" ? (
-                      <img
-                        src={file.path}
-                        alt={
-                          file.caption || `${item.title} - image ${index + 1}`
-                        }
-                        className="w-full h-auto max-h-[75dvh] object-contain"
-                        loading="lazy"
-                      />
+                      <Zoom>
+                        <img
+                          src={file.path}
+                          alt={
+                            file.caption || `${item.title} - image ${index + 1}`
+                          }
+                          className="w-full h-auto max-h-[75dvh] object-contain"
+                          loading="lazy"
+                        />
+                      </Zoom>
                     ) : getFileType(file.type) === "video" ? (
                       <video
                         src={file.path}
