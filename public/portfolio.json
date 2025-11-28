@@ -1,7 +1,7 @@
 [
   {
     "title": "geowarmup❚",
-    "description": "geowarmup❚ is a geography and typing game that rewards fast typing and knowledge.",
+    "description": "geowarmup❚ is a fast paced geography and typing game that rewards fast typing and knowledge. I am quite a geography nerd so I did this as a side project because I couldn't find the exact game I wanted.",
     "url": "https://geowarmup.hankiou.com",
     "tags": [
       "dev",
@@ -51,7 +51,7 @@
   },
   {
     "title": "Cloverfield™",
-    "description": "Hiphen's customer interface. This is the main app I forged my web developper skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
+    "description": "Hiphen's customer interface. This is the main app I forged my web developer skills on. I have been the head of development on this app for 4 years. No confidential data is shown on these screenshots",
     "url": null,
     "tags": [
       "dev",
@@ -308,12 +308,10 @@
     "files": [
       {
         "path": "/portfolio/Expression study/girl1.jfif",
-        "caption": "Expression study",
         "type": "image/jpeg"
       },
       {
         "path": "/portfolio/Expression study/girl2.jfif",
-        "caption": "Character expression sketch",
         "type": "image/jpeg"
       }
     ]
