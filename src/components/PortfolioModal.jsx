@@ -5,6 +5,47 @@ import { TagBadge } from "./TagBadge";
 import { TechBadge } from "./TechBadge";
 import { getFileType } from "../utils/portfolioHelpers";
 
+const PortfolioInfo = ({ item }) => (
+  <>
+    <h2 className="heading-3 mb-4">{item.title}</h2>
+    <p className="body-base text-slate-300 mb-6">{item.description}</p>
+
+    {item.url && (
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-secondary inline-flex items-center gap-2 mb-6"
+      >
+        Visit Project
+        <ExternalLink className="w-4 h-4" />
+      </a>
+    )}
+
+    {item.tags && item.tags.length > 0 && (
+      <div className="mb-6">
+        <h3 className="mono-label mb-3">TAGS</h3>
+        <div className="flex flex-wrap gap-2 justify-center">
+          {item.tags.map((tag) => (
+            <TagBadge key={tag} tag={tag} />
+          ))}
+        </div>
+      </div>
+    )}
+
+    {item.tech && item.tech.length > 0 && (
+      <div>
+        <h3 className="mono-label mb-3">TECH STACK</h3>
+        <div className="flex flex-wrap gap-2 justify-center">
+          {item.tech.map((tech) => (
+            <TechBadge key={tech} tech={tech} />
+          ))}
+        </div>
+      </div>
+    )}
+  </>
+);
+
 export const PortfolioModal = ({ item, onClose }) => {
   const modalRef = useRef(null);
   const triggerRef = useRef(document.activeElement);
@@ -31,6 +72,14 @@ export const PortfolioModal = ({ item, onClose }) => {
     };
   }, []);
 
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   // Click outside to close
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -52,7 +101,7 @@ export const PortfolioModal = ({ item, onClose }) => {
       >
         {/* Close Button */}
         <button
-          className="absolute top-8 right-8 z-10 p-2 hover:bg-slate-800 rounded-lg transition-colors bg-slate-900/80 backdrop-blur"
+          className="fixed top-4 right-4 md:top-8 md:right-8 z-10 p-2 hover:bg-slate-800 rounded-lg transition-colors bg-slate-900/80 backdrop-blur"
           onClick={onClose}
           aria-label="Close modal"
         >
@@ -60,9 +109,9 @@ export const PortfolioModal = ({ item, onClose }) => {
         </button>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-6 h-[90vh]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 p-4 md:p-6 max-h-[90vh] md:h-[90vh] overflow-y-auto md:overflow-hidden scrollbar-transparent">
           {/* File Viewer - 8 columns - VERTICAL SCROLL VIEW */}
-          <div className="md:col-span-8 overflow-y-auto scrollbar-transparent">
+          <div className="md:col-span-8 md:overflow-y-auto scrollbar-transparent">
             <div className="space-y-6">
               {item.files.map((file, index) => (
                 <div key={index} className="space-y-2">
@@ -100,52 +149,20 @@ export const PortfolioModal = ({ item, onClose }) => {
                   )}
                 </div>
               ))}
+
+              {/* Info Card - appears at end of scroll on mobile, separate column on desktop */}
+              <div className="md:hidden">
+                <div className="card">
+                  <PortfolioInfo item={item} />
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Info Panel - 4 columns - Card on right side */}
-          <div className="md:col-span-4">
+          {/* Info Panel - 4 columns - Card on right side (desktop only) */}
+          <div className="hidden md:block md:col-span-4">
             <div className="card h-full overflow-y-auto scrollbar-transparent">
-              <h2 id="modal-title" className="heading-3 mb-4">
-                {item.title}
-              </h2>
-              <p className="body-base text-slate-300 mb-6">
-                {item.description}
-              </p>
-
-              {item.url && (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary inline-flex items-center gap-2 mb-6"
-                >
-                  Visit Project
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              )}
-
-              {item.tags && item.tags.length > 0 && (
-                <div className="mb-6">
-                  <h3 className="mono-label mb-3">TAGS</h3>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {item.tags.map((tag) => (
-                      <TagBadge key={tag} tag={tag} />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {item.tech && item.tech.length > 0 && (
-                <div>
-                  <h3 className="mono-label mb-3">TECH STACK</h3>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {item.tech.map((tech) => (
-                      <TechBadge key={tech} tech={tech} />
-                    ))}
-                  </div>
-                </div>
-              )}
+              <PortfolioInfo item={item} />
             </div>
           </div>
         </div>
