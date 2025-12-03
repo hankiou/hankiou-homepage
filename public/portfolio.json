@@ -567,5 +567,31 @@
         "caption": "Initial design iterations"
       }
     ]
+  },
+  {
+    "title": "Diorama Icon Pack",
+    "description": "Isometric icon pack for Cloverfield interface. There are different visualizations on a leaflet map, I created them to make a more appealing and colorful interface. Check Cloverfield portfolio entry for more details",
+    "url": null,
+    "tags": [
+      "3D",
+      "ux"
+    ],
+    "tech": [
+      "blender"
+    ],
+    "year": 2025,
+    "featured": true,
+    "thumbnail": "/portfolio/thumbnails/diorama-icon-pack.webp",
+    "files": [
+      {
+        "path": "/portfolio/DioramasCloverfield/dioramapack.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/portfolio/DioramasCloverfield/cap.png",
+        "type": "image/png",
+        "caption": "Used on cloverfield to explore different layers"
+      }
+    ]
   }
 ]
